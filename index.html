@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | My Website</title>
+
+    <!-- Embedded CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #0059b3;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .profile-image {
+            width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+        .highlight {
+            background: yellow;
+        }
+    </style>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="biodata.html">Bio-Data</a>
+    </nav>
+
+    <div class="container">
+        <img src="images/profile.jpg" class="profile-image" alt="Profile Photo">
+
+        <h2>About Me</h2>
+        <p>Hello! This is my personal website where you can view my resume and bio-data.</p>
+
+        <button id="highlightBtn">Highlight Text (jQuery)</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#highlightBtn").click(function(){
+                $("p").toggleClass("highlight");
+            });
+        });
+    </script>
+
+</body>
+</html>
